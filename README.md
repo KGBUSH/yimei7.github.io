@@ -1,1 +1,1 @@
-# WESys-worshop.github.io
+# WESys-workshop.github.io
