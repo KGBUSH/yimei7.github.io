@@ -89,7 +89,7 @@
         }
 
         .hero-content {
-            max-width: 80%;
+            max-width: 85%;
             background-color: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(5px);
             padding: 40px;
@@ -172,6 +172,28 @@
             padding: 20px;
             font-weight: 300;
         }
+
+
+        .title-container {
+        position: relative; /* 为绝对定位子元素提供参照 */
+        margin-bottom: 100px; /* 与日期信息保持间距 */
+        }
+
+        .buildsys-header {
+            position: absolute;  /* 关键: 绝对定位 */
+            bottom: -10;           /* 贴标题底部 */
+            right: 0;            /* 贴标题右侧 */
+            
+            /* 保持原有样式 */
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #2a4b7c;
+            white-space: nowrap;  /* 防止文字换行 */
+        }
+
+
+        
     </style>
 </head>
 <body>
@@ -197,8 +219,20 @@
     
     <main class="hero">
         <div class="hero-content">
-            <h1>First International Workshop on Weather and Energy System in the AI era(WESys)</h1>    
-            <div class="date-location">November 18, 2025 in Corolado, US</div>
+            <div class="title-container">
+                <h1>First International Workshop on Weather and Energy System in the AI era(WESys)</h1>
+                
+                <!-- 移动到标题右下角的Buildsys链接 -->
+                <div class="buildsys-header">
+                    <span>A </span>
+                    <a href="https://buildsys.acm.org/2025/" class="buildsys-link">Buildsys</a>
+                    <span> 2025 Workshop</span>
+                </div>
+
+            </div>
+                <div class="date-location">November 18, 2025 in Colorado, US</div>
+
+            
         </div>
     </main>
     
