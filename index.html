@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WESys 2025</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">  
-    <link rel="preconnect" href="https://fonts.gfonts.gstatic.com" crossorigin>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
     <style>
         * {
@@ -16,18 +16,15 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background: 
-            linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), /* 黑色半透明蒙版 */
-            url('images/background.bmp') no-repeat center center fixed;
-            background-size: cover;
+            background: white; /* 移除背景图 */
             color: #333;
             line-height: 1.6;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            position: relative;
         }
         
+        /* 移除背景蒙版相关样式 */
 
         /* Header & Navigation */
         header {
@@ -81,47 +78,75 @@
         .nav-links a:hover {
             color: #3498db;
         }
-
-        /* Hero Section */
-        .hero {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 80px 20px;
-            color: #2c3e50;
+        
+        /* 主内容区域 - 标题和日期 */
+        .content-section {
+            padding: 40px 20px;
+            max-width: 2200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .title-container {
+            position: relative;
+            margin-bottom: 25px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #eee;
         }
 
-        .hero-content {
-            max-width: 85%;
-            background-color: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(5px);
-            padding: 40px;
-            border-radius: 10px;
-        }
-
-        .hero h1 {
+        .title-container h1 {
             font-family: 'Lora', serif;
-            font-size: 2.8rem;
-            margin-bottom: 15px;
+            font-size: 2.2rem;
             color: #2a4b7c;
             font-weight: 400;
+            line-height: 1.4;
+            margin-bottom: 10px;
         }
 
-        .hero h2 {
-            font-family: 'Lora', serif;
-            font-size: 2.4rem;
-            margin-bottom: 25px;
-            font-weight: 400;
-            color: #34495e;
+        .buildsys-header {
+            position: absolute;
+            bottom: 15px;
+            right: 0;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #2a4b7c;
+            white-space: nowrap;
         }
 
         .date-location {
-            font-size: 1.4rem;
-            font-weight: 300;
-            margin-top: 30px;
+            font-size: 1.3rem;
+            font-weight: 400;
             color: #5d6d7e;
+            margin: 15px 0 25px;
+        }
+        
+        /* 图片容器 */
+        .image-container {
+            width: 100%;
+            max-width: 1800px;
+            margin: 30px auto 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .image-container img {
+            width: 100%;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .image-container img:hover {
+            transform: scale(1.02);
+        }
+        
+        .image-caption {
+            text-align: center;
+            font-style: italic;
+            color: #777;
+            margin-top: 10px;
+            font-size: 0.9rem;
         }
 
         /* Responsive Design */
@@ -150,16 +175,21 @@
                 display: block;
             }
             
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .hero h2 {
+            .title-container h1 {
                 font-size: 1.8rem;
             }
             
+            .buildsys-header {
+                position: relative;
+                bottom: auto;
+                right: auto;
+                margin-top: 15px;
+                text-align: right;
+                font-size: 1rem;
+            }
+            
             .date-location {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
         }
 
@@ -176,36 +206,15 @@
             text-align: center;
             padding: 20px;
             font-weight: 300;
+            margin-top: auto;
         }
-
-
-        .title-container {
-        position: relative; /* 为绝对定位子元素提供参照 */
-        margin-bottom: 100px; /* 与日期信息保持间距 */
-        }
-
-        .buildsys-header {
-            position: absolute;  /* 关键: 绝对定位 */
-            bottom: -10;           /* 贴标题底部 */
-            right: 0;            /* 贴标题右侧 */
-            
-            /* 保持原有样式 */
-            font-family: 'Roboto', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: #2a4b7c;
-            white-space: nowrap;  /* 防止文字换行 */
-        }
-
-
-        
     </style>
 </head>
 <body>
     <header>
         <div class="container">
             <nav>
-                <div class="logo">WESys 2025</div>  
+                <div class="logo">WESys 2025</div>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#">AGENDA</a></li>
                     <li><a href="#">ABOUT</a></li>
@@ -222,21 +231,27 @@
         </div>
     </header>
     
-    <main class="hero">
-        <div class="hero-content">
+    <!-- 主内容区域 - 在导航栏下方 -->
+    <main class="content-section">
+        <div class="container">
+            <!-- 标题区域 -->
             <div class="title-container">
-                <h1>First International Workshop on Weather and Energy System in the AI era(WESys)</h1>
-                
+                <h1>First International Workshop on Weather and Energy System in the AI era (WESys)</h1>
                 <div class="buildsys-header">
                     <span>A </span>
                     <a href="https://buildsys.acm.org/2025/" class="buildsys-link">Buildsys</a>
                     <span> 2025 Workshop</span>
                 </div>
-
             </div>
-                <div class="date-location">November 18, 2025 in Colorado, US</div>
-
             
+            <!-- 日期地点 -->
+            <div class="date-location">November 18, 2025 in Colorado, US</div>
+            
+            <!-- 插入的图片 -->
+            <div class="image-container">
+                <img src="images/background.bmp" alt="Workshop Background Image">
+                <div class="image-caption">Venue Preview - Colorado Conference Center</div>
+            </div>
         </div>
     </main>
     
