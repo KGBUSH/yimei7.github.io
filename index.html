@@ -679,6 +679,46 @@
         .org-card .committee-list li:last-child {
             border-bottom: none;
         }
+
+
+                /* 添加在原有CSS中 */
+        .about-image-container {
+            margin: 40px auto;
+            max-width: 100%;
+            width: 90%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .about-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+            max-height: 500px;
+            object-fit: cover;
+        }
+
+        .about-image-container:hover .about-image {
+            transform: scale(1.02);
+        }
+
+        .image-caption {
+            text-align: center;
+            font-style: italic;
+            color: #5a6b8c;
+            margin-top: 10px;
+            font-size: 1rem;
+            padding: 0 20px;
+        }
+
+        @media (max-width: 768px) {
+            .about-image-container {
+                margin: 25px auto;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+        }
     </style>
 </head>
 <body>
@@ -754,6 +794,11 @@
                     low-altitude UAVs are heavily influenced by wind (30%-40%) and temperature (20%) in their energy consumption.
                     They will dock in buildings for charging and they will bring about non-trivial energy loads to buildings. This workshop aims to bring together interdisciplinary scholars from computer science and AI, energy systems, and climate and weather to talk about the opportunities brought about by weather and energy systems in the AI era.
                 </p>
+
+                <div class="about-image-container">
+                    <img src="images/domain.jpg" alt="Weather and Energy Systems Workshop" class="about-image">
+                    <div class="image-caption">Advancing energy systems through AI-powered weather insights</div>
+                </div>
             </div>
             
             <!-- Workshop Schedule 区域 -->
