@@ -713,6 +713,32 @@
             padding: 0 20px;
         }
 
+        .cfp-list {
+            margin: 0px 0;
+        }
+        
+        .cfp-list li {
+            margin-bottom: 15px;
+            padding-left: 0px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .topic-card {
+            background: #f0f5fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #2a4b7c;
+        }
+
         @media (max-width: 768px) {
             .about-image-container {
                 margin: 25px auto;
@@ -730,7 +756,8 @@
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#about">About</a></li>
                     <li><a href="#schedule">Schedule</a></li>
-                    <li><a href="#organization">Organization</a></li> <!-- 合并后的导航项 -->
+                    <li><a href="#cfp">Call For Submission</a></li> 
+                    <li><a href="#organization">Organization</a></li>
                     <li><a href="#venue">Registration and Venue</a></li>
                 </ul>
                 <div class="hamburger" id="hamburger">
@@ -801,7 +828,6 @@
                 </div>
             </div>
             
-            <!-- Workshop Schedule 区域 -->
             <div id="schedule" class="content-block">
                 <h2 class="section-title">Workshop Schedule</h2>
                 <ul class="schedule-list">
@@ -811,8 +837,50 @@
                     <li><strong>Conclusions and the path forward</strong></li>
                 </ul>
             </div>
+            <div id="cfp" class="content-block">
+                <h2 class="section-title">Call for Submission</h2>
+                
+                <p>
+                    We invite researchers, practitioners, and students to submit abstracts for <strong>posters</strong> and <strong>discussion terms</strong> showcasing meaningful work at the intersection of AI, weather modeling, and energy systems. 
+                    This is an excellent opportunity to share your cutting-edge research, ongoing projects, or preliminary results with a highly specialized audience.
+                </p>
+                
+                <h3 style="color: #2a4b7c; margin: 25px 0 15px;">Topics of Interest include,but are not limited to :</h3>
+                
+                <ul style="list-style-type: disc; margin-left: 20px; padding-left: 0;">
+                    <li style="margin-bottom: 10px; padding-left: 5px;">Integration of weather, energy, and AI-based systems</li>
+                    <li style="margin-bottom: 10px; padding-left: 5px;">AI-powered weather understanding and modeling</li>
+                    <li style="margin-bottom: 10px; padding-left: 5px;">AI-assisted weather data reanalysis</li>
+                    <li style="margin-bottom: 10px; padding-left: 5px;">Weather-enhanced Energy Optimization</li>
+                    <li style="margin-bottom: 10px; padding-left: 5px;">Deployment of integrated weather systems</li>
+                    <li style="margin-bottom: 10px; padding-left: 5px;">Methodologies for the measurement and quantification of AI-powered weather systems</li>
+                </ul>
+                <div class="submission-guidelines" >
+                    <h3 style="color: #2a4b7c; margin: 25px 0 15px;">Submission Guidelines</h3>
+
+                    <p>The workshop solicits two types of submissions:</p>
+
+                    <ul class="cfp-list">
+                        <li><strong>Posters</strong> (2 pages in the standard ACM conference PDF template, including references) are encouraged to:(1) Support younger researchers entering this field to share their ongoing work, and
+                                (2) Attract interdisciplinary researchers to share their practice and experience.
+                        </li>
+                        <li><strong>Discussion terms</strong> (no page limits) are encouraged to provide any abstract, research topic, and trends that can catalyze discussion among the workshop attendees and readers.</li>
+                    </ul>
+
+
+                    <div class="submission-details">
+                        <p>Submission Details:</p>
+                        <ul class="cfp-list">
+                            <li><strong>Format:</strong> PDF submissions via hotcrp to: TBD</li>
+                            <li><strong>Deadline:</strong> October 17, 2025 (Anywhere on Earth)</li>
+                            <li><strong>Notification:</strong> October 31, 2025</li>
+                            <li><strong>Poster Size:</strong> For accepted posters, the required physical poster size is A0 portrait orientation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             
-             <div id="organization" class="content-block">
+             <div id="organization" class="content-block">s
                 <h2 class="section-title">Organization</h2>
                 
                 <!-- Steering Committee统一卡片 -->
