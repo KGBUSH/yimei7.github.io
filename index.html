@@ -745,6 +745,18 @@
                 box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             }
         }
+        @media (max-width: 600px) {
+            .chair-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .chair-info {
+                width: 100%;
+                margin-top: 5px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -756,7 +768,8 @@
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#about">About</a></li>
                     <li><a href="#schedule">Schedule</a></li>
-                    <li><a href="#cfp">Call For Submission</a></li> 
+                    <li><a href="#cfp">Call For Posters</a></li> 
+                    <li><a href="#cfd">Call For Discussion Terms</a></li> 
                     <li><a href="#organization">Organization</a></li>
                     <li><a href="#venue">Registration and Venue</a></li>
                 </ul>
@@ -781,7 +794,7 @@
         <div class="hero-content">
             <div class="title-container-hero">
                 <h1>First International Workshop on Weather and Energy Systems in the AI era (WESys)</h1>
-                <div class="subtitle">A <a href="https://buildsys.acm.org/2025/" target="_blank" style="color:white;">BuildSys</a> 2025 Workshop</div>
+                <div class="subtitle"><a href="https://buildsys.acm.org/2025/" target="_blank" style="color:white;">A BuildSys 2025 Workshop</a></div>
                 
                 <!-- 日期和地点信息框 -->
                 <div class="info-box">
@@ -803,25 +816,37 @@
             <!-- About 区域 -->
             <div id="about" class="content-block">
                 <h2 class="section-title">About WESys 2025</h2>
-                            <!-- about us extend 广一些-->
-
                 <p>
-                    Weather is an important factor on energy generation 
-                    (e.g., Photovoltaic systems, Water energy systems) 
-                    and on energy demands (e.g., Low-altitude UAVs, human 
-                    activities and EVs). In recent years, we see two important 
-                    trends: 
+                    Weather is a critical factor influencing both on energy generation
+                     (e.g., photovoltaic systems, hydro energy systems) 
+                     and energy demand (e.g., low-altitude UAVs, human activities, and electric vehicles). 
+                     In recent years, We have seen:
                 </p>
                 <p>
-                    (1) New technology readiness by the weather foundation models
-                    (WFMs), e.g., FourCastNet (NVIDIA); Pangu (Huawei); GraphCast (Google);
-                    and Aurora (Microsoft). WFMs are neural network models, making it easy
-                    to transfer weather knowledge to energy system control and optimization;
-                </p>
+                    <strong>(1) New application demands across domains:</strong>
+                    <ul style="margin-left: 40px;margin-bottom: 20px;font-size: medium;">
+                        <li>Agricultural energy-water system optimization</li>
+                        <li>​Low-altitude UAV energy load forecasting</li>
+                        <li>Energy management and charging load forecasting for electric vehicles (EVs)</li>
+                        <li>Integration and scheduling of renewable energy sources (solar, wind)</li>
+                        <li>Weather-aware building energy efficiency and HVAC control</li>
+                        <li>Extreme weather resilience and disaster preparedness for smart grids</li>
+                        <li>Marine energy utilization and offshore operation safety</li>
+                    </ul>
                 <p>
-                    (2) New application demands: For example, 
-                    low-altitude UAVs are heavily influenced by wind (30%-40%) and temperature (20%) in their energy consumption.
-                    They will dock in buildings for charging and they will bring about non-trivial energy loads to buildings. This workshop aims to bring together interdisciplinary scholars from computer science and AI, energy systems, and climate and weather to talk about the opportunities brought about by weather and energy systems in the AI era.
+                    <strong>(2) Emerging AI/ML Technologies for Weather and Energy Systems:</strong><br>
+                    <ul style="margin-left: 40px;margin-bottom: 20px;font-size: medium;">
+                        <li>Weather Foundation Models</li>
+                        <li>Graph Neural Networks (GNNs)</li>
+                        <li>​Transformer-based Architectures</li>
+                        <li>Physics-Informed Neural Networks (PINNs)</li>
+                        <li>​Diffusion Models and Generative AI</li>
+                        <li>Federated Learning Frameworks</li>
+                    </ul>
+                </p>
+                
+                <p>
+                    This workshop aims to bring together interdisciplinary scholars from computer science and AI, energy engineering, and climate science to discuss new opportunities in weather and energy systems in the AI era.
                 </p>
 
                 <div class="about-image-container">
@@ -834,20 +859,25 @@
                 <h2 class="section-title">Workshop Schedule</h2>
                 <ul class="schedule-list">
                     <li><strong>Talks and Invited Talks</strong></li>
-                    <li><strong>Discussion Topic 1: How weather can help your energy systems/building systems</strong> </li>
-                    <li><strong>Discussion Topic 2: How AI can help in advancing weather and energy systems</strong> </li>
+                    <li><strong>Discussion Topic 1: How can weather help energy systems/building systems</strong> </li>
+                    <li><strong>Discussion Topic 2: How can AI help in advancing weather and energy systems</strong> </li>
                     <li><strong>Conclusions and the path forward</strong></li>
                 </ul>
             </div>
+
+
             <div id="cfp" class="content-block">
-                <h2 class="section-title">Call for Submission</h2>
-                
+                <h2 class="section-title">Call for Posters</h2>
+
+                <!-- <h2 style="color: #2a4b7c; margin: 25px 0 15px;">Call for Posters</h2> -->
+
                 <p>
-                    We invite researchers, practitioners, and students to submit abstracts for <strong>posters</strong> and <strong>discussion terms</strong> showcasing meaningful work at the intersection of AI, weather modeling, and energy systems. 
+                    We invite researchers, practitioners, and students to submit abstracts for <strong>posters</strong> that showcase meaningful work at the intersection of AI, weather modeling, and energy systems. 
+                    The purpose of this submission is : 1) to support younger researchers entering the field by providing a platform to share their ongoing work, and 2) to attract interdisciplinary researchers to present their practical insights and experiences.
                     This is an excellent opportunity to share your cutting-edge research, ongoing projects, or preliminary results with a highly specialized audience.
                 </p>
-                
-                <h3 style="color: #2a4b7c; margin: 25px 0 15px;">Topics of Interest include,but are not limited to :</h3>
+                <p>The posters will be published in Buildsys'25 Proceedings</p>
+                <h3 style="color: #2a4b7c; margin: 25px 0 15px;">Topics of Interest include, but are not limited to:</h3>
                 
                 <ul style="list-style-type: disc; margin-left: 20px; padding-left: 0;">
                     <li style="margin-bottom: 10px; padding-left: 5px;">Integration of weather, energy, and AI-based systems</li>
@@ -857,26 +887,61 @@
                     <li style="margin-bottom: 10px; padding-left: 5px;">Deployment of integrated weather systems</li>
                     <li style="margin-bottom: 10px; padding-left: 5px;">Methodologies for the measurement and quantification of AI-powered weather systems</li>
                 </ul>
-                <div class="submission-guidelines" >
+                
+                <p style="margin-bottom: 10px;">
+                    <strong>Format:</strong> 2 pages in the Buildsys Poster format, including references.
+                </p>
+
+                <div class="submission-guidelines">
                     <h3 style="color: #2a4b7c; margin: 25px 0 15px;">Submission Guidelines</h3>
+                    
+                    
+                    <!-- Poster Submission Section -->
+                    <div class="submission-type" style="margin: 30px 0; padding: 20px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #2a4b7c;">
+                        <h4 style="color: #2a4b7c; margin-bottom: 15px;">Poster Submissions</h4>
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <li style="margin-bottom: 8px; padding-left: 5px;"><strong>Submission link:</strong> All papers must be in Adobe Portable Document Format (PDF) and submitted through the HotCRP platform for this workshop: 
+                                <a href="https://buildsys25-wesys.hotcrp.com/">https://buildsys25-wesys.hotcrp.com/</a></li>
+                            <li style="margin-bottom: 8px; padding-left: 5px;"><strong>Deadline:</strong> October 17, 2025 (AOE)</li>
+                            <li style="margin-bottom: 8px; padding-left: 5px;"><strong>Notification:</strong> October 31, 2025 (AOE)</li>
+                            <li style="margin-bottom: 8px; padding-left: 5px;"><strong>Camera-ready:</strong> November 3, 2025 (AOE)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>    
+            <div id="cfd" class="content-block">
+                    
+                <h2 class="section-title">Call for Discussion Terms</h2>
+                <p>
+                    We invite researchers, practitioners, and students to submit abstracts for <strong>discussion terms</strong> that showcase meaningful work at the intersection of AI, weather modeling, and energy systems. 
+                    The purpose of this submission is : to share any abstract, research topics, and emerging trends that can catalyze discussion among the workshop attendees and readers.
+                    This is an a unique opportunity to present your insights and engage in a cross-disciplinary exchange of ideas with leading scholars from fields including computer science, energy systems, and climate science.
+                </p>
+                <p>
+                    The submissions will be assigned into several small discussion groups with common research topics.
+                    This discussion session aims to facilitate more targeted and in-depth exchanges among participants with shared research interests.
+                </p>
+                <h3 style="color: #2a4b7c; margin: 25px 0 15px;">Topics of Interest include:</h3>
+                
+                <ul style="list-style-type: disc; margin-left: 20px; padding-left: 0;">
+                    <li style="margin-bottom: 10px; padding-left: 5px;">How can weather help energy systems/building systems</li>
+                    <li style="margin-bottom: 10px; padding-left: 5px;">How can AI help in advancing weather and energy systems</li>
+                </ul>
+                <p style="margin-bottom: 10px;">
+                    <strong>Format:</strong> Maximum 300 words abstract.
+                </p>
 
-                    <p>The workshop solicits two types of submissions:</p>
-
-                    <ul class="cfp-list">
-                        <li><strong>Posters</strong> (2 pages in the Buildsys Poster format template, including references) are encouraged to:(1) Support younger researchers entering this field to share their ongoing work, and
-                                (2) Attract interdisciplinary researchers to share their practice and experience.
-                        </li>
-                        <li><strong>Discussion terms</strong> (Max 300 words) are encouraged to provide any abstract, research topic, and trends that can catalyze discussion among the workshop attendees and readers.</li>
-                    </ul>
-
-
-                    <div class="submission-details">
-                        <p>Submission Details:</p>
-                        <ul class="cfp-list">
-                            <li><strong>Submission link:</strong> All papers must be in Adobe Portable Document Format (PDF) and submitted through the HotCRP platform for this workshop: TBD</li>
-                            <li><strong>Deadline:</strong> October 17, 2025 (AOE)</li>
-                            <li><strong>Notification:</strong> October 31, 2025(AOE)</li>
-                            <li><strong>Camera-ready:</strong> November 3, 2025(AOE)</li>
+                <div class="submission-guidelines">
+                    <h3 style="color: #2a4b7c; margin: 25px 0 15px;">Submission Guidelines</h3>
+                                        
+                    <!-- Discussion Terms Submission Section -->
+                    <div class="submission-type" style="margin: 30px 0; padding: 20px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #2a4b7c;">
+                        <h4 style="color: #2a4b7c; margin-bottom: 15px;">Discussion Terms Submissions</h4>                   
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <li style="margin-bottom: 8px; padding-left: 5px;"><strong>Submission link:</strong> All abstracts must be submitted through the HotCRP platform for this workshop: 
+                                <a href="https://buildsys25-wesys.hotcrp.com/">https://buildsys25-wesys.hotcrp.com/</a></li>
+                            <li style="margin-bottom: 8px; padding-left: 5px;"><strong>Deadline:</strong> November 3 2025 (AOE)</li>
+                            <li style="margin-bottom: 8px; padding-left: 5px;"><strong>Notification:</strong> November 10, 2025 (AOE)</li>
                         </ul>
                     </div>
                 </div>
@@ -895,7 +960,7 @@
                         </li>
                         <li>
                             <strong>Fei Chen</strong>
-                            <span>The Hong Kong University of Science and Technology (HKUST)</span>
+                            <span>Hong Kong University of Science and Technology (HKUST)</span>
                         </li>
                         <li>
                             <strong>Dan Wang</strong>
@@ -904,36 +969,42 @@
                     </ul>
                 </div>
                 
+
+
                 <!-- Workshop Chairs统一卡片 -->
-                <div class="org-card">
-                    <h3>Workshop Chairs</h3>
-                    <p>
-                        <span class="chair-title">Workshop Chair:</span>
-                        Dan Wang (HK PolyU)
-                    </p>
-                    <p>
+            <div class="org-card">
+                <h3>Workshop Chairs</h3>
+                <p>
+                    <span class="chair-title">Workshop Chair:</span>
+                </p>
+                <p style="display: flex;align-items: center; /* 垂直居中 */";>
+                    <span class="co-chair-name" style="margin-right:30px;">Dan Wang(HK PolyU) </span>
+
+                    Email:<a href="mailto:dan.wang@polyu.edu.hk">dan.wang@polyu.edu.hk</a>
+                </p>
+                <p>
                         <span class="chair-title">Co-Organizing Chairs:</span>
-                        Fang He and Jiaqi Fan
-                    </p>
-                </div>
+                </p>
+                <p style="display: flex;align-items: center; /* 垂直居中 */";>
+                        <span class="co-chair-name" style="margin-right: 40px;">Fang He(HK PolyU)</span>
+                        Email:<a href="mailto:fanhe@polyu.edu.hk" >fanhe@polyu.edu.hk</a>
+                </p>
+                <p style="display: flex;align-items: center; /* 垂直居中 */";>
+                        <span class="co-chair-name" style="margin-right:34px;">Jiaqi Fan(HK PolyU)</span>
+                        Email:<a href="mailto:jq898.fan@connect.polyu.hk">jq898.fan@connect.polyu.hk</a>
+                </p>
+            </div>
+
             </div>
             <!-- Venue 区域 -->
             <div id="venue" class="content-block">
                 <h2 class="section-title">Registration and Venue</h2>
                 <p>
-                For registration and venue details, visa information, etc, <a href="https://buildsys.acm.org/2025/">Please visit the BuildSys webpage</a> 
+                For registration and venue details, visa information, etc, <a href="https://buildsys.acm.org/2025/registration/">Please visit the BuildSys webpage</a> 
                 </p>
             </div>
         </div>
-        
-        <!-- Call to Action Section -->
-        <div class="cta-section">
-            <div class="cta-container">
-                <h3 class="cta-title">Ready to Participate?</h3>
-                <p class="cta-text">Join us at WESys 2025 to explore the latest advancements at the intersection of AI, weather, and energy systems.</p>
-                <a href="#" class="btn-cta">Register Now</a>
-            </div>
-        </div>
+
     </main>
     
     <footer>
